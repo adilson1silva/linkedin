@@ -1,10 +1,16 @@
+from dotenv import load_dotenv
+import os
+load_dotenv()
 import openai
 import re
 from pathlib import Path
 
 # === Configura a tua chave da API ===
 # SUBSTITUI PELA TUA CHAVE REAL DA OPENAI
-client = openai.OpenAI(api_key="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")
+
+#client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 # === Lê os dados do perfil pessoal ===
 # Certifica-te que o ficheiro meus_dados.txt está no mesmo diretório
