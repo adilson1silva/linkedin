@@ -47,7 +47,7 @@ def main():
     wait = WebDriverWait(driver, 10)
     
     # 1. Realiza o login
-    login_linkedin(driver, 'inserir email', 'password')
+    login_linkedin(driver, 'kapacidade265@gmail.com', 'kapacidade')
     
     # 2. Executa a pesquisa e aplica os filtros
     apply_filter(driver)
@@ -84,7 +84,7 @@ def main():
             
             # Tenta clicar no botão "Ver mais" para expandir a descrição completa
             try:
-                see_more = driver.find_element(By.CLASS_NAME, 'artdeco-button__text')
+                see_more = driver.find_element(By.ID, 'ember39')
                 see_more.click()
                 sleep(5)  # Aguarda a descrição ser expandida
             except Exception as e:
